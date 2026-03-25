@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-mario {
+    height: 200px;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%; /* Faz o círculo */
+    object-fit: cover;
+    overflow: hidden;
+}
+
+button {
+    color: white;
+    background-color: #C51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.video-mario-luigi {
+    height: 500px; /* Mantém a altura que você já usava */
+    width: auto;   /* Ajusta a largura proporcionalmente */
+    border-radius: 20px; /* Opcional: para deixar as bordas arredondadas */
+    object-fit: contain; /* Garante que o vídeo não seja cortado */
+    z-index: 1; /* Garante que ele fique NA FRENTE da máscara (-1) */
+    position: relative; /* Necessário para o z-index funcionar corretamente */
+}
+
+/* Ajuste para celulares */
+@media(max-width: 1100px) {
+    .video-mario-luigi {
+        width: 50vw;
+        height: auto;
+        margin-top: 50px;
+    }
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 100px;
+}
+
+.caixa-principal {
+    width: 40%;
+}
+
+.caixa-video {
+    position: fixed;
+    z-index: -1;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.mascara {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+.titulo {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.link-watapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* --- HEADER E SUB-MENU --- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    gap: 50px;
+    padding: 30px 0;
+    padding-left: 40px;          /* Dá um recuo da borda esquerda */
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilo unificado para links e o botão do dropdown */
+.header a, .dropbtn {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    background: none;
+    border: none;
+}
+
+/* Efeito hover unificado para os itens principais */
+.header a:hover, .dropdown:hover .dropbtn {
+    color: #C51111;
+    font-size: 27px;
+}
+
+/* Container do Dropdown */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Conteúdo do Sub-menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: none;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    top: 100%; /* Inicia logo abaixo do texto */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o sub-menu em relação ao botão */
+    padding: 10px 0;
+    z-index: 100;
+}
+
+/* Estilo dos links de dentro do sub-menu */
+.dropdown-content a {
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    display: block;
+    text-align: left; /* Esquerda o texto dentro da caixa */
+    width: 100%;
+}
+
+.dropdown-content a:hover {
+    background-color: #C51111;
+    color: white;
+    font-size: 19px;
+    padding-left: 0; /* Remove deslocamento para manter centralizado */
+}
+
+/* Faz o menu aparecer */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- FIM DO HEADER --- */
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+    z-index: 20;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid gray;
+    outline-color: #18d80f;
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid gray;
+    outline-color: #18d80f;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+    z-index: 15;
+}
+
+/* Responsividade */
+@media(max-width: 1100px) {
+    p { display: flex; }
+
+    .caixa-mae {
+        flex-direction: column;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    .caixa-principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .imagem-mario-luigi {
+        width: 80vw;
+        height: auto;
+    }
+
+    .header {
+        margin: 10px;
+        gap: 30px;
+        font-size: 20px;
+    }
+
+    .header a, .dropbtn {
+        font-size: 20px;
+    }
+    
+    .dropdown-content {
+        min-width: 160px;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Star Buller Desenvolvedor" />
+    <meta property="og:image"
+        content="https://mario-bros-5vi9y4iux-andy-bullers-projects.vercel.app/img/mario.png" />
+    <meta property="og:description"
+        content="Star Buller Desenvolvedor - Criando Sites Incríveis para o Seu Negócio!" />
+    <meta property="og:site_name" content="Star Buller Desenvolvedor" />
+
+    <link href="https://unpkg.com" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Sstar Buller</title>
+</head>
+
+<body>
+    <div onclick="cliqueiNaMascara()" class="mascara-formulario"></div>
+
+    <video src="./assets/video star buller.mp4" autoplay muted loop class="caixa-video"></video>
+    <div class="mascara"></div>
+
+    <!-- HEADER COM SUB-MENU -->
+    <div class="header">
+        <a href="#">Home</a>
+        
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Modelos de Sites</a>
+            <div class="dropdown-content">
+                <a href="https://pizzaria-e-hamburgueria-star-buller.vercel.app/" target="_blank">Pizzaria e Hamburgueria</a>
+                <a href="https://barbearia-star-buller-2026.vercel.app/" target="_blank">Barbearia</a>
+                <a href="#">Profissional Autônomo</a>
+            </div>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=556184752125" target="_blank">Fale Conosco</a>
+    </div>
+
+    <img class="logo" src="./assets/logo star buller desenvolvedro.jpg" alt="logo-header">
+
+    <div class="caixa-mae">
+        <div class="caixa-principal">
+            
+            <p class="titulo"data-aos="fade-right" data-aos-deLay="600">Seu site profissional é o seu cartão de vistas digital!</p><br>
+            <p>Seu negócio não pode ser invisível na internet. Mais do que uma vitrine, criamos uma máquina de vendas 24h que transforma visitantes em clientes reais...</p>
+
+            <button onclick="cliqueiNoBotao()">ENTRE EM CONTATO</button>
+        </div>
+
+        <div>
+            <video class="video-mario-luigi"   controls>
+    <source src="./assets/video star buller negocios.mp4" type="video/mp4">
+</video>
+        </div>
+    </div>
+
+    <div class="link-watapp">
+        <a href="https://api.whatsapp.com/send?phone=556184752125" target="_blank"><i
+                            class="fa-brands fa-whatsapp fa-4x" style="color: hsl(60, 14%, 99%);"></i></a>
+    </div>
+
+    <form class="formulario-fale-conosco" action="https://formcarry.com/s/W29Pu479B3s" method="POST"
+        enctype="multipart/form-data">
+        <input placeholder="Seu nome" type="text" name="nome">
+        <input placeholder="Seu telefone" type="tel" name="telefone">
+        <textarea placeholder="Descreva como deseja ser atendido aqui..." name="duvidas"></textarea>
+        <button type="submit">Pedir um orçamento</button>
+    </form>
+</body>
+<script src="./scripts.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true      
+        });
+    </script>
+
+
+</html>
